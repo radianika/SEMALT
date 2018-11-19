@@ -1,0 +1,2 @@
+# SEMALT
+Small test-task
