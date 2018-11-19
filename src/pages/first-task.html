@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Default title</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
+
+</head>
+
+<body>
+<a class="btn" alt="вернуться назад" href="../index.html">Назад</a>
+<div class='btn-bar'>
+	<button type='button' class='btn js-first'>600 × 2826</button>
+		<button type='button' class='btn js-second'>600 × 7896</button>
+			<button type='button' class='btn js-third'>600 × 3600</button>
+
+	
+</div>
+
+<div class="block">
+	<img src="../images/long-img.jpg" alt="long-img" class="img js-img">
+</div>
+<script>
+	var images = ['../images/long-img.jpg', '../images/long-img2.jpeg', '../images/long-img3.jpg'];
+	var img=document.querySelector('.js-img');
+	var firstBtn = document.querySelector('.js-first');
+	firstBtn.addEventListener('click', function(){
+		img.setAttribute('src', images[0]);})
+	var secondBtn = document.querySelector('.js-second');
+		secondBtn.addEventListener('click', function(){
+		img.setAttribute('src', images[1]);})
+	var thirdBtn = document.querySelector('.js-third');
+		thirdBtn.addEventListener('click', function(){
+		img.setAttribute('src', images[2]);})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Default title</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
+
+</head>
+
+<body>
+<a class="btn" alt="вернуться назад" href="../index.html">Назад</a>
+<button class="btn js-insert" type="button">Добавить +1</button>
+	<div class="second">
+		<div class="flex-block js-grid">
+
+			<div class="padding">
+				<div class="flex-block__item">1</div>
+			</div>
+			<div class="padding">
+				<div class="flex-block__item">2</div>
+		</div>
+		<div class="padding">
+			<div class="flex-block__item">3</div>
+			</div>
+		</div>
+</div>
+<template class="js-temp-item">
+<div class="padding">
+			<div class="flex-block__item js-item"></div>
+			</div>
+		</div>
+	
+</template>
+<script>
+	
+	var insertBtn = document.querySelector('.js-insert');
+	var grid = document.querySelector('.js-grid');
+	var temp = document.querySelector('.js-temp-item');
+	var count = 4;
+	insertBtn.addEventListener('click', function(){
+		let itemBox=document.importNode(temp.content, true);
+		let item = itemBox.querySelector('.js-item');
+		item.innerHTML= count;
+		grid.appendChild(itemBox);
+		count++;
+});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	    font-family: 'Comfortaa', cursive;
+	color: #f9e79f;
+}
+
+body {
+	background: #1b2631;
+	
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding:50px;
+	border: 1px solid #f1c40f;
+position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+.title{
+	    color: #f7dc6f;
+	font-size: 2.5em;
+    font-weight: 300;
+	margin-bottom: 1.5rem;
+}
+.btn {
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+	margin: 10px 20px;
+	padding: 10px 30px;
+	position: relative;
+	border: 2px solid ;
+	color: #f1c40f;
+	font-family: 'Montserrat', sans-serif;
+	transition: .4s;
+	background-color: inherit;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	border: 2px solid rgba(0, 0, 0, 0);
+	transition: .4s;
+}
+
+.btn:hover::after {
+	border-color: #f1c40f;
+	width: calc(100% - 10px);
+	height: calc(100% + 10px);
+}
+
+
+.btn {
+	padding: 0.5rem
+		
+}
+
+//first task
+.block {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #006865;
+	width: 800px;
+	height: 400px;
+	overflow: scroll;
+}
+
+.img {
+	width: 800px;
+	height: auto;
+	transition: all 7s;
+	position: absolute;
+	top: 0;
+}
+
+.block:hover .img {
+	transform: translateY(-100%);
+	top: 400px;
+}
+
+
+//second task
+.second {
+	padding: 3rem 20px 20px 20px;
+}
+
+.flex-block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__item {
+
+		background-color: darkslategrey;
+		height: 210px;
+		width: 100%;
+
+		text-align: center;
+		line-height: 210px;
+		
+
+	}
+}
+
+.padding {
+	padding-right: 1.5rem;
+	margin-bottom: 20px;
+	flex: 1 1 33%;
+}
+
+.padding:nth-child(3n),
+.padding:last-child {
+	padding-right: 0;
+}
+.btn-bar{
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	top: 20px;
+	left:50%;
+	transform: translateX(-50%);
+	border: 1px solid #f1c40f;
+	padding: 1rem;
+}
